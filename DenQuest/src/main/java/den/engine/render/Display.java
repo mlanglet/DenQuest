@@ -153,7 +153,7 @@ public class Display {
     }
     
 	private void render(long window){
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the framebuffer
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // clear the frame buffer
 		ArrayList<Drawable> drawables;
 		
 		drawables = game.getVisibleDrawables();
@@ -163,7 +163,7 @@ public class Display {
 			d.draw();
 		}
 		
-		glfwSwapBuffers(window); // swap the color buffers
+		glfwSwapBuffers(window); // swap the colour buffers
 	}
  
 	public static Vector2D translatePosition(Vector2D originalPos){
