@@ -36,7 +36,7 @@ public abstract class Shader {
 		StringBuilder shaderSource = new StringBuilder();
 		
 		try {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(("src/shaders/" + shaderName + ".glsl"))));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(("src/main/shaders/" + shaderName + ".glsl"))));
 			String line;
 			while((line = reader.readLine()) != null){
 				shaderSource.append(line).append('\n');

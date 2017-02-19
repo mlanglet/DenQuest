@@ -62,8 +62,8 @@ public class Display {
  
         // Configure our window
         glfwDefaultWindowHints(); // optional, the current window hints are already the default
-        glfwWindowHint(GLFW_VISIBLE, GL_FALSE); // the window will stay hidden after creation
-        glfwWindowHint(GLFW_RESIZABLE, GL_FALSE); // the window will be resizable
+        glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE); // the window will stay hidden after creation
+        glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE); // the window will be resizable
  
         // Create the window
         window = glfwCreateWindow(WIDTH, HEIGHT, "DenQuest!", NULL, NULL);
@@ -97,9 +97,9 @@ public class Display {
         // Make the window visible
         glfwShowWindow(window);
         
-        glEnable(GL_BLEND);
-        glDisable(GL_ALPHA_TEST);
-        glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        //glEnable(GL_BLEND);
+        //glDisable(GL_ALPHA_TEST);
+        //glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         
     	game = new GameHandler();
     	keyboardInputManager = new KeyboardManager(game);

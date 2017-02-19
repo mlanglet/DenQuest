@@ -18,11 +18,14 @@ switch ( OperatingSystem.current() ) {
 project.ext.lwjglVersion = "3.1.1"
 
 repositories {
+	flatDir {
+	 	dirs 'includes'
+	}
 	mavenCentral()
 }
 
 dependencies {
-	compile "de.matthiasmann:twl:utils:PNGDecoder" 
+	compile fileTree(dir: 'includes', include: '*.jar')
 	compile "org.lwjgl:lwjgl:${lwjglVersion}"
 	compile "org.lwjgl:lwjgl-assimp:${lwjglVersion}"
 	compile "org.lwjgl:lwjgl-bgfx:${lwjglVersion}"
@@ -45,6 +48,7 @@ dependencies {
 	compile "org.lwjgl:lwjgl-tinyfd:${lwjglVersion}"
 	compile "org.lwjgl:lwjgl-vulkan:${lwjglVersion}"
 	compile "org.lwjgl:lwjgl-xxhash:${lwjglVersion}"
+	runtime fileTree(dir: 'includes', include: '*.jar')
 	runtime "org.lwjgl:lwjgl:${lwjglVersion}:${lwjglNatives}"
 	runtime "org.lwjgl:lwjgl-assimp:${lwjglVersion}:${lwjglNatives}"
 	runtime "org.lwjgl:lwjgl-bgfx:${lwjglVersion}:${lwjglNatives}"
